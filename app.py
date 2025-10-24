@@ -17,7 +17,7 @@ menu = st.sidebar.radio(
 # --- CARGA DE DATOS ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv("C:/Users/palmi/Desktop/proyecto_mod_1/notebooks/netflix_titles_clean.csv")
+    df = pd.read_csv("netflix_titles_clean.csv")
     df["date_added"] = pd.to_datetime(df["date_added"], errors="coerce")
     df["year_added"] = df["date_added"].dt.year
     return df
@@ -263,3 +263,4 @@ elif menu == "📊 Visualizaciones":
 # ============================================================
 # 🎬 FIN DEL APP
 # ============================================================
+
